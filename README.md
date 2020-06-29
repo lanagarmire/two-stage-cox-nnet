@@ -6,7 +6,7 @@ This is the package of 2-stage coxnnet, which is an extension of original coxnne
 * Train Cox-nnet on image data (*1st phase*)
 * Train Cox-nnet on gene data (*1st phase*)
 * Hidden nodes integration of two data types
-* Train Cox-nnet on integrated hidden features (2nd phase)
+* Train Cox-nnet on integrated hidden features (*2nd phase*)
 
 ### Package Requirements
 * Python 2.7 
