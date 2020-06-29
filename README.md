@@ -1,7 +1,14 @@
-# cox-nnet
+#  Two-stage cox-nnet
 
-This is a package for building a model using the neural network extension of Cox regression.  Documentation and examples can be found at http://traversc.github.io/cox-nnet/docs/.  
+This is the package of 2-stage coxnnet, which is an extension of original coxnnet developed by Travers. (https://github.com/traversc/cox-nnet)
 
-# 2-stage cox-nnet
+### Two-stage cox-nnet has two phases:
+* Train Cox-nnet on image data
+* Train Cox-nnet on gene data
+* Hidden nodes integration of two data types
+* Train Cox-nnet on integrated hidden features
 
-Please see two-stage cox-nnet subfolder for additional code.
+### Package Requirements
+* Python 2.7 
+* Theano 1.0.0
+* Run faster on GPU
