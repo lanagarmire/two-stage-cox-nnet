@@ -32,7 +32,7 @@ model, cost_iter = trainCoxMlp(x_train, ytime_train, ystatus_train, model_params
 
 featureScore = varImportance(model, x_train, ytime_train, ystatus_train)
 
-numpy.savetxt('feature_importance_allsample.csv', featureScore, delimiter=",")
+numpy.savetxt('feature_importance.csv', featureScore, delimiter=",")
 
 saveModel(model,'hidden_layer.csv')
 
