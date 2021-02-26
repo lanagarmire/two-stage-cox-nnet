@@ -1,0 +1,33 @@
+#!/bin/bash
+                                       ## REQUIRED: #!/bin/bash must be on the 1st line
+                                       ## and it must be the only string on the 1st line
+#SBATCH --job-name=coxnnet_image_rna         ## Name of the job for the scheduler
+#SBATCH --account=lgarmire             ## name of the resource account. Does not change
+#SBATCH --partition=batch              ## queue to submit the job to. Does not change
+#SBATCH --nodes=1                      ## number of nodes you are requesting
+#SBATCH --ntasks=1                     ## how many resource spaces do you want to reserve
+#SBATCH --cpus-per-task=3              ## number of cores/threads needed
+#SBATCH --nodelist=garmire-gpu01       ## If you need a GPU, request the GPU node
+#SBATCH --mem=30G                      ## Memory requested per job
+#SBATCH --time=10:00:00                ## Amount of time you are reserving for this job
+#SBATCH --mail-user=jingzhe@umich.edu  ## send email notifications to umich email listed
+#SBATCH --mail-type=ALL                ## when to send email (standard values are:
+                                       ## NONE, BEGIN, END, FAIL, REQUEUE, ALL.  See                     
+                                       ##  documentation for others)
+#SBATCH --output=./%x-%j               ## output and error info written to the file listed
+                                       ##(optional: different name format than default)
+
+##  End of scheduler directives
+# I recommend using the following lines so that some output is put in your output file
+# as an indicator your script is working
+
+if [[ $SLURM_JOB_NODELIST ]] ; then
+   echo "Running on"
+   scontrol show hostnames $SLURM_JOB_NODELIST
+fi
+
+# R CMD BATCH dna_meth.R
+module load anaconda2 cuda/10.1 lib/python2/theano-gpu/1.0.0+cu101 lib/python2/cox-nnet
+
+
+THEANO_FLAGS='device=cuda,floatX=float32' python coxnnet_image_rna.py

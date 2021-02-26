@@ -3,17 +3,17 @@ from cox_nnet import *
 import numpy
 
 import sklearn
-x = numpy.loadtxt(fname="coxnet_x_rna.csv",delimiter=",",skiprows=0)
+x = numpy.loadtxt(fname="/nfs/turbo/umms-garmire/jingzhe/two-stage-cox-nnet/data/coxnet_x_rna.csv",delimiter=",",skiprows=0)
 
-ytime = numpy.loadtxt(fname="y_days_rna.csv",delimiter=",",skiprows=0)
+ytime = numpy.loadtxt(fname="/nfs/turbo/umms-garmire/jingzhe/two-stage-cox-nnet/data/y_days_rna.csv",delimiter=",",skiprows=0)
 
-ystatus = numpy.loadtxt(fname="event_rna.csv",delimiter=",",skiprows=0)
+ystatus = numpy.loadtxt(fname="/nfs/turbo/umms-garmire/jingzhe/two-stage-cox-nnet/data/event_rna.csv",delimiter=",",skiprows=0)
 
 count = 0
-for i in range(5):
+for i in range(1):
     count += 1
     x_train, x_test, ytime_train, ytime_test, ystatus_train, ystatus_test = sklearn.cross_validation.train_test_split(x, ytime, ystatus, test_size = 0.2, random_state = count)
-
+    x_train, x_valid, ytime_train, ytime_valid, ystatus_train, ystatus_valid = sklearn.cross_validation.train_test_split(x_train, ytime_train, ystatus_train,test_size = 0.1, random_state = count)
     # remove sample TCGA-2Y-A9GZ-01
     #x_train = numpy.delete(x_train, 35, axis=0)
     #ytime_train = numpy.delete(ytime_train, 35)
@@ -44,7 +44,7 @@ for i in range(5):
     
     model_params = dict(node_map = None, input_split = None, L2_reg=numpy.exp(L2_reg))
     
-    model, cost_iter = trainCoxMlp(x_train, ytime_train, ystatus_train, model_params, search_params, verbose=True)
+    model, cost_iter, cost_list, cost_list_valid = trainCoxMlp(x_train, ytime_train, ystatus_train, x_valid, ytime_valid, ystatus_valid, model_params, search_params, verbose=True)
     
     
     
@@ -58,14 +58,15 @@ for i in range(5):
     ## W=numpy.asarray(W,dtype='float32')
     ## rna_hidden = hidden_features(W,b,x_test)
     ## numpy.savetxt("rna_hidden1.csv",rna_hidden,delimiter=",")
-
-    numpy.savetxt("Wr"+str(count)+".csv", W, delimiter=",")
-    numpy.savetxt("br"+str(count)+".csv", b, delimiter=",")
-    numpy.savetxt("coxnet_rtest"+str(count)+".csv",x_test, delimiter=",")
-    numpy.savetxt("coxnnet_rtest_time"+str(count)+".csv",ytime_test,delimiter = ",")
-    numpy.savetxt("coxnnet_rtest_sta"+str(count)+".csv", ystatus_test, delimiter = ",")
-    numpy.savetxt("coxnet_rtrain"+str(count)+".csv",x_train, delimiter=",")
-    numpy.savetxt("coxnnet_rtrain_time"+str(count)+".csv",ytime_train,delimiter = ",")
-    numpy.savetxt("coxnnet_rtrain_sta"+str(count)+".csv", ystatus_train, delimiter = ",")
+    numpy.savetxt('/nfs/home/jingzhe/two-stage-cox-nnet/examples/cost_list_rna.txt',numpy.array(cost_list))
+    numpy.savetxt('/nfs/home/jingzhe/two-stage-cox-nnet/examples/cost_list_valid_rna.txt',numpy.array(cost_list_valid))
+    #numpy.savetxt("Wr"+str(count)+".csv", W, delimiter=",")
+    #numpy.savetxt("br"+str(count)+".csv", b, delimiter=",")
+    #numpy.savetxt("./check/coxnet_rtest"+str(count)+".csv",x_test, delimiter=",")
+    #numpy.savetxt("./check/coxnnet_rtest_time"+str(count)+".csv",ytime_test,delimiter = ",")
+    #numpy.savetxt("./check/coxnnet_rtest_sta"+str(count)+".csv", ystatus_test, delimiter = ",")
+    #numpy.savetxt("./check/coxnet_rtrain"+str(count)+".csv",x_train, delimiter=",")
+    #numpy.savetxt("./check/coxnnet_rtrain_time"+str(count)+".csv",ytime_train,delimiter = ",")
+    #numpy.savetxt("./check/coxnnet_rtrain_sta"+str(count)+".csv", ystatus_train, delimiter = ",")
 
 

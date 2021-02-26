@@ -1,0 +1,9 @@
+Running on
+garmire-gpu01
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gpuarray/dnn.py:184: UserWarning: Your cuDNN version is more recent than Theano. If you encounter problems, try updating Theano or downgrading cuDNN to a version >= v5 and <= v7.
+  warnings.warn("Your cuDNN version is more recent than "
+Using cuDNN version 7605 on context None
+Mapped name None to device cuda: Tesla V100-PCIE-16GB (0000:3B:00.0)
+/home/jingzhe/.local/lib/python2.7/site-packages/sklearn/cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)

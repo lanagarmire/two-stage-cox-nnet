@@ -1,0 +1,68 @@
+Running on
+garmire-gpu01
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+WARNING (theano.gof.compilelock): Something wrong happened: <type 'exceptions.OSError'> [Errno 28] No space left on device: '/nfs/turbo/umms-garmire/home/jingzhe/.theano/compiledir_Linux-3.10-el7.x86_64-x86_64-with-centos-7.7.1908-Core-x86_64-2.7.16-64/lock_dir'
+Traceback (most recent call last):
+  File "coxnnet_hiddenLayer_image.py", line 1, in <module>
+    from cox_nnet import *
+  File "/nfs/home/jingzhe/two-stage-cox-nnet/examples/cox_nnet.py", line 41, in <module>
+    import theano
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/__init__.py", line 156, in <module>
+    import theano.gpuarray
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gpuarray/__init__.py", line 31, in <module>
+    from . import fft, dnn, opt, extra_ops, multinomial, reduction, sort, rng_mrg, ctc
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gpuarray/fft.py", line 14, in <module>
+    from .opt import register_opt, op_lifter, register_opt2
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gpuarray/opt.py", line 2802, in <module>
+    from .dnn import (local_abstractconv_cudnn,
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gpuarray/dnn.py", line 339, in <module>
+    handle_type = CUDNNDataType('cudnnHandle_t', 'cudnnDestroy')
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gpuarray/dnn.py", line 259, in CUDNNDataType
+    version=version(raises=False))
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gpuarray/dnn.py", line 319, in version
+    if not dnn_present():
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gpuarray/dnn.py", line 209, in dnn_present
+    dnn_present.avail, dnn_present.msg = _dnn_check_version()
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gpuarray/dnn.py", line 180, in _dnn_check_version
+    v = version()
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gpuarray/dnn.py", line 330, in version
+    profile=False)
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/compile/function.py", line 317, in function
+    output_keys=output_keys)
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/compile/pfunc.py", line 486, in pfunc
+    output_keys=output_keys)
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/compile/function_module.py", line 1841, in orig_function
+    fn = m.create(defaults)
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/compile/function_module.py", line 1715, in create
+    input_storage=input_storage_lists, storage_map=storage_map)
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gof/link.py", line 699, in make_thunk
+    storage_map=storage_map)[:3]
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gof/vm.py", line 1084, in make_all
+    impl=impl))
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gof/op.py", line 955, in make_thunk
+    no_recycling)
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gof/op.py", line 858, in make_c_thunk
+    output_storage=node_output_storage)
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gof/cc.py", line 1217, in make_thunk
+    keep_lock=keep_lock)
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gof/cc.py", line 1157, in __compile__
+    keep_lock=keep_lock)
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gof/cc.py", line 1619, in cthunk_factory
+    module = get_module_cache().module_from_key(
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gof/cc.py", line 48, in get_module_cache
+    return cmodule.get_module_cache(config.compiledir, init_args=init_args)
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gof/cmodule.py", line 1572, in get_module_cache
+    _module_cache = ModuleCache(dirname, **init_args)
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gof/cmodule.py", line 688, in __init__
+    self.refresh()
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gof/cmodule.py", line 996, in refresh
+    with compilelock.lock_ctx():
+  File "/sw/med/lab/garmire/modules/anaconda2/2019.03/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gof/compilelock.py", line 39, in lock_ctx
+    get_lock(lock_dir=lock_dir, **kw)
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gof/compilelock.py", line 85, in _get_lock
+    lock(get_lock.lock_dir, **kw)
+  File "/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gof/compilelock.py", line 275, in lock
+    os.mkdir(tmp_dir)
+OSError: [Errno 28] No space left on device: '/nfs/turbo/umms-garmire/home/jingzhe/.theano/compiledir_Linux-3.10-el7.x86_64-x86_64-with-centos-7.7.1908-Core-x86_64-2.7.16-64/lock_dir'

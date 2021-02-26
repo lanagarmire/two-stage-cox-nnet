@@ -1,0 +1,259 @@
+Running on
+garmire-gpu01
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+/sw/med/lab/garmire/modules/lib/python2/theano-gpu/1.0.0+cu101/lib/python2.7/site-packages/theano/gpuarray/dnn.py:184: UserWarning: Your cuDNN version is more recent than Theano. If you encounter problems, try updating Theano or downgrading cuDNN to a version >= v5 and <= v7.
+  warnings.warn("Your cuDNN version is more recent than "
+Using cuDNN version 7605 on context None
+Mapped name None to device cuda: Tesla V100-PCIE-16GB (0000:3B:00.0)
+/home/jingzhe/.local/lib/python2.7/site-packages/sklearn/cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+Using nesterov accelerated gradient
+training model
+running time: 3.357306 seconds
+total iterations: 1999.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.699163 seconds
+total iterations: 1999.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.696325 seconds
+total iterations: 1999.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.748850 seconds
+total iterations: 1999.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.696193 seconds
+total iterations: 1999.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.682606 seconds
+total iterations: 1978.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.653853 seconds
+total iterations: 1932.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.638582 seconds
+total iterations: 1932.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.572539 seconds
+total iterations: 1840.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.693494 seconds
+total iterations: 1999.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.088846 seconds
+total iterations: 1242.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.087335 seconds
+total iterations: 1242.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.053370 seconds
+total iterations: 1196.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.086146 seconds
+total iterations: 1242.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.104663 seconds
+total iterations: 1196.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.905160 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.275583 seconds
+total iterations: 1472.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.903972 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.900933 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.461405 seconds
+total iterations: 1702.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.902566 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.952172 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.898207 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.901316 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.903399 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.901386 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.899594 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.902159 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.903689 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.899691 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.901800 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.903080 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.957312 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.902362 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.703399 seconds
+total iterations: 1999.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.702789 seconds
+total iterations: 1999.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.900753 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.902584 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.907353 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.753190 seconds
+total iterations: 1999.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.694118 seconds
+total iterations: 1999.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.699009 seconds
+total iterations: 1999.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.904912 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.698736 seconds
+total iterations: 1999.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.696418 seconds
+total iterations: 1999.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.715221 seconds
+total iterations: 1999.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.702101 seconds
+total iterations: 1999.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.899756 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.900496 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.901611 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.957758 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.898212 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.976093 seconds
+total iterations: 1104.000000
+Using nesterov accelerated gradient
+training model
+running time: 0.905275 seconds
+total iterations: 1012.000000
+Using nesterov accelerated gradient
+training model
+running time: 1.700220 seconds
+total iterations: 1999.000000
+Using nesterov accelerated gradient
+training model
+cost: 145.638923, iteration: 0
+cost: 2.355694, iteration: 23
+cost: 1.229685, iteration: 46
+cost: 1.096810, iteration: 69
+cost: 1.036443, iteration: 92
+cost: 1.036955, iteration: 138
+cost: 1.037099, iteration: 184
+cost: 1.037831, iteration: 230
+cost: 1.038076, iteration: 391
+cost: 1.037911, iteration: 644
+cost: 1.036863, iteration: 805
+cost: 1.036815, iteration: 897
+cost: 1.040189, iteration: 1081
+cost: 1.036727, iteration: 1242
+cost: 1.035522, iteration: 1403
+cost: 1.032766, iteration: 1449
+cost: 1.031037, iteration: 1495
+cost: 1.029348, iteration: 1541
+cost: 1.030582, iteration: 1587
+cost: 1.021290, iteration: 1610
+cost: 1.021219, iteration: 1656
+cost: 1.010282, iteration: 1702
+cost: 1.017348, iteration: 1748
+cost: 1.003027, iteration: 1863
+cost: 0.986864, iteration: 1909
+cost: 0.986765, iteration: 1955
+running time: 1.693390 seconds
+total iterations: 1999.000000
