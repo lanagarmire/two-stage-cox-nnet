@@ -1,0 +1,7 @@
+feature,rsquare,pvalue
+StDev_Cells_Neighbors_PercentTouching_Expanded,0.387257607746855,8.03176574152117e-22
+Mean_Nuclei_Texture_SumEntropy_MaskedHWithoutOverlap_3_0,0.261654455725084,2.83897909982706e-15
+Median_Nuclei_Texture_SumEntropy_MaskedHWithoutOverlap_3_135,0.256502958275953,4.28050982596754e-16
+Granularity_11_MaskedEWithoutOverlap,0.132257991540816,7.78765080447269e-09
+ImageQuality_MaxIntensity_MaskedHWithoutOverlap,0.0970146000434844,6.07436595922436e-08
+Intensity_MaxIntensity_MaskedHWithoutOverlap,0.0970146000434844,6.07436595922436e-08
