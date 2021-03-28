@@ -15,7 +15,7 @@ train_cindex_gene = c()
 test_cindex_ir = c()
 train_cindex_ir = c()
 
-SEED=5
+SEED=8
 k=10
 for (i in 1:k){
 
