@@ -57,7 +57,7 @@ The following object is masked from ‘package:caret’:
 
 > library(ggplot2)
 > 
-> for (k in 1:20){
+> for (k in 1:10){
 + 
 +    ###########Image Hidden Layer
 +    W = read.csv(paste(paste('./../../output/W',k,sep=''),'csv',sep='.'),header =F)
@@ -194,5 +194,5 @@ There were 50 or more warnings (use warnings() to see the first 50)
 > 
 > 
 > proc.time()
-    user   system  elapsed 
-1700.817    3.075 1710.132 
+   user  system elapsed 
+856.509   2.225 867.349 

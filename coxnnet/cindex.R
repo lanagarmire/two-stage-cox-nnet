@@ -15,6 +15,7 @@ train_cindex_gene = c()
 test_cindex_ir = c()
 train_cindex_ir = c()
 
+SEED=5
 k=10
 for (i in 1:k){
 
@@ -52,7 +53,7 @@ for (i in 1:k){
    colnames(test_km) = c("risk","time","status")
    colnames(train_km) = c("risk","time","status")
    
-   if(i==11){
+   if(i==SEED){
       write.csv(test_km, paste("KM_plots", "/coxph_gene_test.csv",sep=''), row.names=FALSE)
       write.csv(train_km, paste("KM_plots", "/coxph_gene_train.csv",sep=''), row.names=FALSE)
    }
@@ -98,7 +99,7 @@ for (i in 1:k){
    colnames(test_km) = c("risk","time","status")
    colnames(train_km) = c("risk","time","status")
    
-   if(i==11){
+   if(i==SEED){
       write.csv(test_km, paste("KM_plots", "/coxph_image_test.csv",sep=''), row.names=FALSE)
       write.csv(train_km, paste("KM_plots", "/coxph_image_train.csv",sep=''), row.names=FALSE)
    }
@@ -130,7 +131,7 @@ for (i in 1:k){
    colnames(test_km) = c("risk","time","status")
    colnames(train_km) = c("risk","time","status")
    
-   if(i==11){
+   if(i==SEED){
       write.csv(test_km, paste("KM_plots","/coxnet_image_test.csv",sep=''), row.names=FALSE)
       write.csv(train_km, paste("KM_plots","/coxnet_image_train.csv",sep=''), row.names=FALSE)
    }
@@ -162,7 +163,7 @@ for (i in 1:k){
    colnames(test_km) = c("risk","time","status")
    colnames(train_km) = c("risk","time","status")
    
-   if(i==11){
+   if(i==SEED){
       write.csv(test_km, paste("KM_plots", "/coxnet_gene_test.csv",sep=''), row.names=FALSE)
       write.csv(train_km, paste("KM_plots", "/coxnet_gene_train.csv",sep=''), row.names=FALSE)
    }   
@@ -194,7 +195,7 @@ for (i in 1:k){
    colnames(test_km) = c("risk","time","status")
    colnames(train_km) = c("risk","time","status")
  
-   if(i==11){
+   if(i==SEED){
       write.csv(test_km, paste("KM_plots", "/coxnet_image_gene_test.csv",sep=''), row.names=FALSE)
       write.csv(train_km, paste("KM_plots", "/coxnet_image_gene_train.csv",sep=''), row.names=FALSE)
    }   
