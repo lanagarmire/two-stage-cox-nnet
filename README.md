@@ -9,12 +9,10 @@ This is the package of 2-stage coxnnet, which is an extension of original coxnne
 * go to coxnnet/coxnnet_rna/, and run coxnnet_rna.py
 
 ### run two-stage coxnnet on image and gene expression data
-* go to coxnnet/two_stage/, then 
-
-* Train Cox-nnet on image data (*1st phase*)
-* Train Cox-nnet on gene data (*1st phase*)
-* Hidden nodes integration of two data types
-* Train Cox-nnet on integrated hidden features (*2nd phase*)
+* go to coxnnet/two_stage/
+* first run coxnnet_hiddenlayer_image.py and coxnnet_hiddenlayer_rna.py respectively
+* then run integration.R to integrate the hidden nodes
+* finally run coxnnet_image_rna.py to train 2nd stage model
 
 ### Package Requirements
 * Python 2.7 
